@@ -52,7 +52,8 @@ public class Program
         for (int iCount = 0; iCount < eachRollCount.Length; iCount++)
         {
             float percent = (((float)eachRollCount[iCount]/numRolls) * 100);
-            int asterisksCount = (int)Math.Round(percent);
+            //int asterisksCount = (int)Math.Round(percent) //I use this version unless I am using the developer command prompt and compiling it;
+            int asterisksCount = (int)percent;
 
             string asterisks = new string('*', asterisksCount);
 
