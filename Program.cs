@@ -13,7 +13,7 @@ public class Program
 
         System.Console.WriteLine("Welcome to the dice throwing simulator!");
 
-        System.Console.WriteLine("\nHow many times will the dice be thrown?");
+        System.Console.Write("\nHow many times will the dice be thrown? ");
         string userInput = System.Console.ReadLine();
         if (userInput != null)
         {
@@ -43,7 +43,7 @@ public class Program
         for (int iCount = 0; iCount < eachRollCount.Length; iCount++)
         {
             float percent = (((float)eachRollCount[iCount]/numRolls) * 100);
-            int asterisksCount = (int)percent;
+            int asterisksCount = (int)Math.Round(percent);
 
             string asterisks = new string('*', asterisksCount);
 
